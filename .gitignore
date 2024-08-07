@@ -1,0 +1,8 @@
+node_modules
+combined.log
+error.log
+.vscode
+node_modules/
+dist/
+*.log
+.env

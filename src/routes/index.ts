@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import countryRoutes from './countryRoutes';
+import regionRoutes from './regionRoutes';
+import languageRoutes from './languageRoutes';
+import statisticsRoutes from './statisticsRoutes';
+const router = Router();
+router.use('/countries', countryRoutes);
+router.use('/regions', regionRoutes);
+router.use('/languages', languageRoutes);
+router.use('/statistics', statisticsRoutes);
+export default router;
