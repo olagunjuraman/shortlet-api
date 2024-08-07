@@ -1,16 +1,17 @@
 import { createClient, RedisClientType } from 'redis';
 import logger from '../utils/logger';
+import dotenv from 'dotenv'
+dotenv.config({})
+
 class RedisClient {
 private static instance: RedisClient;
 public client: RedisClientType;
 private constructor() {
 this.client = createClient({
-url: process.env.REDIS_URL ,
-password: process.env.REDIS_PASSWORD
-
+url: process.env.REDIS_URL as string
 });
 
-console.log(process.env.REDIS_URL)
+
 
 this.client.on('error', (err) => logger.error('Redis Client Error', err));
 }

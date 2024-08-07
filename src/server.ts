@@ -2,6 +2,10 @@ import app from './app';
 import mongoose from 'mongoose';
 import logger from './utils/logger';
 import { redisClient } from './config/redis';
+import dotenv from 'dotenv';
+
+
+dotenv.config()
 
 import { scheduleCountryUpdates } from './jobs/updateCountriesJob';
 
