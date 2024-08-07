@@ -13,7 +13,7 @@ const swaggerDocument: OpenAPIV3.Document = {
       description: "Local server"
     },
     {
-      url: "https://your-production-url.com/api",
+      url: "https://shortlet-api.onrender.com/api",
       description: "Production server"
     }
   ],
